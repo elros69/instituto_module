@@ -1,0 +1,14 @@
+<odoo>
+    <!-- Grupo director -->
+    <record id="grupo_director" model="res.groups">
+        <field name = "name">Director</field>
+        <field name = "users" eval = "[(4, ref('base.user_admin'))]"/>
+    </record>
+
+    <!-- Grupo profesor -->
+    <record id="grupo_profesor" model="res.groups">
+        <field name = "name">Profesor</field>
+        <field name = "users" eval = "[(4, ref('base.user_admin'))]"/>
+    </record>
+    
+</odoo>

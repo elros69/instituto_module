@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="instituto_module.grados_model">
+            <field name="name">Lista Grados</field>
+            <field name="model">instituto_module.grados_model</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombreGrado" />
+                    <field name="listaModulos" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Record Actions-->
+
+
+        <record model = "ir.actions.act_windows" id = "abrir_lista_grados">
+            <field name = "name">Action Grados</field>
+            <field name = "res_model">instituto_module.grados_model</field>
+            <field name = "view_mode">tree,form</field>
+        </record>
+
+        <record model = "ir.actions.act_windows" id = "abrir_lista_profesores">
+            <field name = "name">Action Profesores</field>
+            <field name = "res_model">instituto_module.profesores_model</field>
+            <field name = "view_mode">tree,form</field>
+        </record>
+
+        <record model = "ir.actions.act_windows" id = "abrir_lista_alumnos">
+            <field name = "name">Action Alumnos</field>
+            <field name = "res_model">instituto_module.alumnos_model</field>
+            <field name = "view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item Global-->
+        <menuitem name="Modulo Instituto" id="instituto_module_menu_root" />
+
+        <!-- Menu Item Categorias -->
+        <menuitem name="Grados" id = "instituto_module_menu_categoria_grados" parent="instituto_module_menu_root"
+            action="abrir_lista_grados" />
+        <menuitem name="Personas" id = "instituto_module_menu_categoria_personas" parent="instituto_module_menu_root" />
+        <!-- Submenu Categorias Personas -->
+        <menuitem name="Profesores" id = "instituto_module_submenu_categoria_profesores" parent="instituto_module_menu_categoria_personas"
+            action="abrir_lista_profesores" />
+        <menuitem name="Alumnos" id = "instituto_module_submenu_categoria_alumnos" parent="instituto_module_menu_categoria_personas"
+            action="abrir_lista_alumnos" />
+    </data>
+</odoo>
