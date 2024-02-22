@@ -1,29 +1,29 @@
 from odoo import  models, fields, api
 
-class modulos_model(models.Model):
-    _name = "instituto_module.modulos_model"
-    _description = "Modelo que se encarga de mostrar una lista de modulos impartidos en un grado y su profesor asignado"
+class modulos(models.Model):
+    _name="instituto.modulos"
+    _description="Modelo que se encarga de mostrar una lista de modulos impartidos en un grado y su profesor asignado"
     
     nombreModulo = fields.Char(
-        string = "Modulo: "
+        string="Modulo: "
     )
     
     gradosPertenece = fields.Many2many(
-        string = "Grados en los que se Imparte: ",
-        comodel_name = 'instituto_module.grados_model',
+        string="Grados en los que se Imparte: ",
+        comodel_name='instituto.grados',
         
         ondelete = "cascade",
     )
     
     maestrosModulo = fields.Many2one(
         string = "Maestros que Imparten el Modulo: ",
-        comodel_name = "instituto_module.profesores_model",
+        comodel_name = "instituto.profesores",
         ondelete = "cascade",
     )
     
     alumnosModulo = fields.Many2many(
         string = "Alumnos en el modulo",
-        comodel_name = 'instituto_module.alumnos_model',
+        comodel_name = 'instituto.alumnos',
         
         ondelete='cascade',
         

@@ -1,4 +1,15 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_instituto_grados,instituto.grados,model_instituto_grados,grupo_director,1,1,1,1
+access_instituto_modulos,instituto.modulos,model_instituto_modulos,grupo_director,1,1,1
+access_instituto_profesores,instituto.profesores,model_instituto_profesores,grupo_director,1,1,1,1
+access_instituto_alumnos,instituto.alumnos,model_instituto_alumnos,grupo_director,1,1,1,1
 
-access_instituto_module.grados_module,instituto_module.grados_module,model_instituto_module.grados_module,base.grupo_director,1,1,1,1
-instituto_module.modulos_module,
+access_instituto_grados,instituto.grados,model_instituto_grados,grupo_profesor,1,1,1,1
+access_instituto_modulos,instituto.modulos,model_instituto_modulos,grupo_profesor,1,1,1,1
+access_instituto_profesores,instituto.profesores,model_instituto_profesores,grupo_profesor,1,0,0,0
+access_instituto_alumnos,instituto.alumnos,model_instituto_alumnos,grupo_profesor,1,1,1,1
+
+access_instituto_grados,instituto.grados,model_instituto_grados,base.group_user,1,0,0,0
+access_instituto_modulos,instituto.modulos,model_instituto_modulos,base.group_user,1,0,0,0
+access_instituto_profesores,instituto.profesores,model_instituto_profesores,base.group_user,0,0,0,0
+access_instituto_alumnos,instituto.alumnos,model_instituto_alumnos,base.group_user,1,0,0,0

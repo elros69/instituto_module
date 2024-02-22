@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import profesores, grados, modulos, alumnos
+from . import profesores, alumnos, grados, modulos

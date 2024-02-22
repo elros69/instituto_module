@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "instituto_module",
+    'name': "instituto",
 
     'summary': "Modulo creado para la gestion de los cursos, profesor y alumnos de un instituto",
 
@@ -29,6 +29,9 @@ mas aparte los alumnos integros de la institucion.
         'security/groups.xml',
         'security/ir.model.access.csv',
         'views/gradosView.xml',
+        'views/modulosView.xml',
+        'views/profesoresView.xml',
+        'views/alumnosView.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

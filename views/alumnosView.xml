@@ -1,3 +1,25 @@
 <odoo>
-    
+    <data>
+        <record model="ir.ui.view" id="instituto.alumnosView">
+            <field name="name">Lista Alumnos</field>
+            <field name="model">instituto.alumnos</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombreAlumno"/>
+                    <field name="modulosMatriculado"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id = "abrir_lista_alumnos">
+            <field name="name">Action Alumnos</field>
+            <field name="res_model">instituto.alumnos</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        
+        <menuitem name="Alumnos" id = "instituto_module_submenu_categoria_alumnos" parent="instituto_module_menu_categoria_personas"
+            action="abrir_lista_alumnos" />
+
+    </data>
 </odoo>

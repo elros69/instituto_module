@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record model = "ir.ui.view" id = "instituto.profesoresView">
+            <field name = "name">Lista Profesores</field>
+            <field name = "model">instituto.profesores</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombreMaestro" />
+                    <field name="dni" />
+                    <field name = "modulosImpartidos"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model = "ir.actions.act_window" id = "abrir_lista_profesores">
+            <field name = "name">Action Profesores</field>
+            <field name = "res_model">instituto.profesores</field>
+            <field name = "view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Personas" id="instituto_module_menu_categoria_personas" parent="instituto_module_menu_root" />
+
+        <menuitem name="Profesores" id="instituto_module_submenu_categoria_profesores" parent="instituto_module_menu_categoria_personas"
+            action="abrir_lista_profesores" />
+
+    </data>
+</odoo>
